@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="author" content="dssalazaru">
+    <meta name="copyright" content="Copyright by @dssalazaru">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Metadata Cache -->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- Icon -->
+    <link rel="icon" type="image/svg" href="/img/home.svg">
+    <!-- Titulo -->
+    <title>Inventario</title>
+</head>
+
+<body>
+
+    <header class="main-content">
+        <div class="main-content__brand">
+            <img src="" alt="Logo de la empresa">
+            <h1>
+                EMPRESA
+            </h1>
+        </div>
+        <div class="main-content__menu">
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="far fa-plus-square"></i>Nuevo registro</a></li>
+                    <li><a href="#"><i class="far fa-edit"></i>Modificar</a></li>
+                    <li><a href="#"><i class="far fa-minus-square"></i>Eliminar</a></li>
+                </ul>
+            </nav>
+        </div>
+        <label for="buscar">
+        <div class="main-content__search">
+            <button class="btn-search" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+            <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
+        </label>
+        </div>
+        
+        <div class="main-content__user">
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <span>admin</span>
+                <ul>
+                    <li id="rol">Rol: admin/usuario</li>
+                    <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
+                    <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <aside class="aside">
+        <div class="aside__alerts">
+            <h3>Notificaciones</h3>
+            <div class="panel-alertas">
+                <ul>
+                    
+                    <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo $equipo2</li>
+                    <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la IP: 127.0.0.1</li>
+                    <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="aside__calendar">
+            <h3>Programar un evento</h3>
+            <form id="nueva-alerta" method="POST">
+                <label for="fecha-alerta">Fecha del evento</label>
+                <input type="date" name="fecha-alerta" id="fecha-alerta" required>
+                <textarea name="info-alerta" id="info-alerta" cols="30" rows="10" placeholder="Escribe el evento a recordar" required></textarea>
+                <button type="submit" onclick="saveEvent()">Programar</button>
+            </form>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="main__filters">
+
+        </div>
+    </main>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <script src="/js/main.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.in-buscar {
+    width: 2rem;
+    
+}
+
+.hidden {
+    transition: width 1s;
+    width: 0;
+    display: none;
+}
