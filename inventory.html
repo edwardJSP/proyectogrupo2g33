@@ -13,15 +13,17 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <!-- CSS 
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    -->
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- google fonds-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <!-- Icon -->
-    <link rel="icon" type="image/svg" href="/img/home.svg">
+    <link rel="icon" type="image/png" href="/images/logo.png">
     <!-- Titulo -->
     <title>Inventario</title>
 </head>
@@ -30,134 +32,144 @@
 
     <header class="main-content">
         <div class="main-content__brand">
-            <img src="" alt="Logo de la empresa">
+            <img src="/images/logo.png" alt="Logo de la empresa">
             <h1>
-                EMPRESA
+                G2Inventory
             </h1>
         </div>
-        <label for="buscar">
+        <div id="main-content__srch-user">
             <div class="main-content__search">
-                <button class="btn-search" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
-                <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
-        </label>
-        </div>
-
-        <div class="main-content__user">
-            <div class="user-icon">
-                <i class="fas fa-user"></i>
+                <label for="buscar">
+                    <button id="btn-search" class="search-close" onclick="toggleSearch()"><i
+                            class="fas fa-search"></i></button>
+                    <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
+                </label>
             </div>
-            <div class="user-info">
-                <span>admin</span>
-                <ul>
-                    <li id="rol">Rol: admin/usuario</li>
-                    <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
-                    <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
-                </ul>
+            <div class="main-content__user">
+                <button class="nobnt">
+                    <div class="user-info">
+                        <i class="fas fa-user"></i>
+                        <span>admin</span>
+                        <ul>
+                            <li id="rol">Rol: admin/usuario</li>
+                            <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
+                            <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                        </ul>
+                </button>
             </div>
         </div>
     </header>
-    <aside class="sidebar">
-        <div class="sidebar__button">
-            <i class="fas fa-bars"></i>
-            <h2>Panel</h2>
-        </div>
-        <div class="sidebar__menu">
-            <h3>Registros</h3>
-            <ul>
-                <li><a href="#"><i class="far fa-plus-square"></i>Nuevo</a></li>
-                <li><a href="#"><i class="far fa-edit"></i>Modificar</a></li>
-                <li><a href="#"><i class="far fa-minus-square"></i>Eliminar</a></li>
-            </ul>
-        </div>
-        <div class="sidebar__filter">
-            <ul>
-                <li>
-                    <button onclick="">Tipo</button>
-                    <ul>
-                        <li>Escritorio</li>
-                        <li>Portatil</li>
-                        <li>Movil</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <main class="main">
-        <div class="main__display">
-            <div class="item" id="item-1">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO1</strong>
-                </button>
+    <div class="wrapper__main">
+        <aside class="sidebar">
+            <div class="sidebar__button">
+                <i class="fas fa-bars"></i>
+                <h2>Panel</h2>
             </div>
-            <div class="item" id="item-2">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO2</strong>
-                </button>
+            <div class="sidebar__menu">
+                <h3>Registros</h3>
+                <ul>
+                    <li><a href="#"><i class="far fa-plus-square"></i>Nuevo</a></li>
+                    <li><a href="#"><i class="far fa-edit"></i>Modificar</a></li>
+                    <li><a href="#"><i class="far fa-minus-square"></i>Eliminar</a></li>
+                </ul>
             </div>
-            <div class="item" id="item-3">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO3</strong>
-                </button>
+            <div class="sidebar__filter">
+                <ul>
+                    <li>
+                        <button onclick="">Tipo</button>
+                        <ul>
+                            <li>Escritorio</li>
+                            <li>Portatil</li>
+                            <li>Movil</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="item" id="item-4">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO4</strong>
-                </button>
-            </div>
-            <div class="item" id="item-5">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO5</strong>
-                </button>
-            </div>
-            <div class="item" id="item-6">
-                <button>
-                    <img src="/img/escritorio.png" alt="Dispositivo tipo escritorio">
-                    <strong>$EQUIPO6</strong>
-                </button>
-            </div>
-        </div>
-        <div class="main__wrapper-right">
-            <div class="main__alerts">
-                <h3>Notificaciones</h3>
-                <div class="panel-alertas">
-                    <ul>
-
-                        <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo
-                            <strong>$EQUIPO2</strong></li>
-                        <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la IP:
-                            127.0.0.1</li>
-                        <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
-                    </ul>
+        </aside>
+        <main class="main">
+            <div class="main__display">
+                <div class="item" id="item-1">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO1</strong>
+                    </button>
+                </div>
+                <div class="item" id="item-2">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO2</strong>
+                    </button>
+                </div>
+                <div class="item" id="item-3">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO3</strong>
+                    </button>
+                </div>
+                <div class="item" id="item-4">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO4</strong>
+                    </button>
+                </div>
+                <div class="item" id="item-5">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO5</strong>
+                    </button>
+                </div>
+                <div class="item" id="item-6">
+                    <button>
+                        <i class="fas fa-desktop"></i>
+                        <strong>$EQUIPO6</strong>
+                    </button>
                 </div>
             </div>
-            <div class="main__calendar">
-                <h3>Programar un evento</h3>
-                <form id="nuevo-evento" method="POST">
-                    <label for="fecha-evento">Fecha del evento</label>
-                    <input type="date" name="fecha-evento" id="fecha-evento" required>
-                    <textarea name="info-evento" id="info-evento" cols="30" rows="10"
-                        placeholder="Escribe el evento a recordar" required></textarea>
-                    <button type="submit" onclick="saveEvent()">Programar</button>
-                </form>
-            </div>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="footer__logos">
-            <img src="/img/mintic-unab.png" alt="Logos institucionales">
-        </div>
-        <div class="footer__support">
-            <h2>¿Necesitas asistencia?</h2>
+            <div class="main__aside">
+                <div class="main__alerts">
+                    <h3>Notificaciones</h3>
+                    <div class="panel-alertas">
+                        <ul>
 
-            <h3></h3>
-            <ul>
-                <li></li>
-            </ul>
+                            <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo
+                                <strong>$EQUIPO2</strong></li>
+                            <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la
+                                IP:
+                                127.0.0.1</li>
+                            <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__calendar">
+                    <h3>Programar un evento</h3>
+                    <form id="nuevo-evento" method="POST">
+                        <label for="fecha-evento">Fecha del evento</label>
+                        <input type="date" name="fecha-evento" id="fecha-evento" required>
+                        <textarea name="info-evento" id="info-evento" cols="30" rows="10"
+                            placeholder="Escribe el evento a recordar" required></textarea>
+                        <button type="submit" onclick="saveEvent()">Programar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__logos">
+                <img src="/images/mintic-unab.png" alt="Logos institucionales">
+            </div>
+            <div class="footer__support">
+                <h2>¿Necesitas asistencia?</h2>
+                <ul>
+                    <li><i class="fas fa-phone"></i>(+57) 300 611 4504</li>
+                    <li><i class="fas fa-phone"></i>(+57) 300 200 4000</li>
+                    <li><i class="far fa-envelope"></i>soportedssu@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer__info"></div>
+        </div>
+        <div class="footer__copy">
+            <h5>G2Inventory 2021 Todos los derechos reservados. Un desarrollo de <strong>G2</strong></h5>
         </div>
     </footer>
 
@@ -174,12 +186,12 @@
     -->
 
 
-    <!-- JavaScript 
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="/js/main.js"></script>
-    -->
+
 </body>
 
 </html>
