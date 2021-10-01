@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="/css/usuarios.css">
+    </head>
+    <body>
+        <header class="main-content">
+            <div class="main-content__brand">
+                <img src="images/logo empresa.jpeg" alt="Logo de la empresa" width="90px" height="90px">
+                <h1>
+                    G2Inventory
+                </h1>
+            </div>
+            <div class="main-content__user">
+                <div class="user-icon">
+                    <img src="images/icons8-hombre-de-negocios-50.jpeg" alt="admin">
+                </div>
+                <div class="user-info">
+                    <span>Admin</span>
+           </div>
+        </header>
+        <main>
+        <br><br>
+            <h1>
+                Registro de Usuario
+            </h1>
+            <section>
+                <form action="registrardatos" method="post">
+                    <br><br>
+                    <label for="Usuario">Tipo de Usuario: </label>
+                    <br><br>
+                    <select name="combo">
+                        <!-- Opciones de la lista -->
+                        <option value="1">Admin</option>
+                        <option value="2" selected>Usuario</option> <!-- Opción por defecto -->
+                    </select>
+                    <br><br>
+                    <p>Nombres: <input type="text" name="nombres" size="40"></p>
+                    <br><br>
+                    <p>Apellidos: <input type="text" name="apellidos" size="40"></p>
+                    <br><br>
+                    <p>Correo: <input type="email" name="correo" size="40"></p>
+                    <br><br>
+                    <p>Contraseña: <input type="password" name="password" minlength="6"></p>
+                    <br><br>
+                    <input type="submit" value="Registrarse">
+                    <br><br>
+                    <a href="/inventory.html"> Ir a la pagina principal</a>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
