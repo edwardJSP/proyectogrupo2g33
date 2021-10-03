@@ -1,6 +1,6 @@
 :root {
-    --primary-blue: #0099E0;
-    --secundary-blue: #142157;
+    --primary-blue: #191970;
+    --secundary-blue: #0099E0;
     --extra-blue: #15297c;
 }
 
@@ -57,7 +57,6 @@ img {
 }
 
 .main-content__search label {
-    background-color: aliceblue;
     border-radius: 1rem;
     height: 3rem;
     min-width: 3rem;
@@ -67,7 +66,7 @@ img {
 
 .main-content__search button {
     border: 0;
-    background-color: var(--extra-blue);
+    background-color: var(--secundary-blue);
     padding: 1rem 1.6rem 1rem 1rem;
     margin-right: -0.8rem;
     color: aliceblue;
@@ -96,6 +95,7 @@ img {
     display: flex;
     align-items: center;
     background-color: white;
+    border-radius: 1rem;
 }
 
 .user-info > span {
@@ -104,7 +104,7 @@ img {
 
 .user-info > i {
     padding: 0.5rem;
-    background-color: var(--extra-blue);
+    background-color: var(--secundary-blue);
     border-radius: 100%;
     color: white;
 }
@@ -168,20 +168,25 @@ img {
 
 
 .main__display {
-    display: flex;
-    background-color: #bbb;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    gap: 1rem;
     overflow-y: scroll;
+    background-color: #bbb;
     width: 70%;
+    padding: 0 0 1rem 0;
 }
+
 
 .item button{
     padding: 1.5rem 0;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
 }
 .item button i{
-    font-size: 5rem;
+    font-size: 3.5rem;
     display: block;
     padding-bottom: 0.8rem;
 }
@@ -217,13 +222,32 @@ img {
     width: 12rem;
 }
 
-.footer__copy {
-    background-color: var(--secundary-blue);
+.footer__support {
+    align-items: center;
 }
+
+.footer__support h2 {
+    margin: 0.5rem 0;
+}
+
+.footer__support ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer__support i {
+    padding: 0 0.5rem 0 1.5rem;
+}
+
+/* Copy */
 
 .footer__copy h5{
     text-align: center;
     padding: 0.5rem;
+}
+
+.footer__copy {
+    background-color: var(--secundary-blue);
 }
 
 /* Extra estilos */
