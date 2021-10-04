@@ -59,8 +59,8 @@
             </div>
         </div>
     </header>
-    <div class="wrapper__main">
-        <aside class="sidebar">
+    <main class="wrapper__main">
+        <div class="sidebar">
             <div class="sidebar__button">
                 <i class="fas fa-bars"></i>
                 <h2>Panel</h2>
@@ -86,74 +86,72 @@
                     </li>
                 </ul>
             </div>
-        </aside>
-        <main class="main">
-            <div class="main__display">
-                <div class="item" id="item-1">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO1</strong>
-                    </button>
-                </div>
-                <div class="item" id="item-2">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO2</strong>
-                    </button>
-                </div>
-                <div class="item" id="item-3">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO3</strong>
-                    </button>
-                </div>
-                <div class="item" id="item-4">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO4</strong>
-                    </button>
-                </div>
-                <div class="item" id="item-5">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO5</strong>
-                    </button>
-                </div>
-                <div class="item" id="item-6">
-                    <button>
-                        <i class="fas fa-desktop"></i>
-                        <strong>$EQUIPO6</strong>
-                    </button>
-                </div>
+        </div>
+        <div class="main__display grid">
+            <div class="item" id="item-1">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO1</strong>
+                </button>
             </div>
-            <div class="main__aside">
-                <div class="main__alerts">
-                    <h3>Notificaciones</h3>
-                    <div class="panel-alertas">
-                        <ul>
+            <div class="item" id="item-2">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO2</strong>
+                </button>
+            </div>
+            <div class="item" id="item-3">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO3</strong>
+                </button>
+            </div>
+            <div class="item" id="item-4">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO4</strong>
+                </button>
+            </div>
+            <div class="item" id="item-5">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO5</strong>
+                </button>
+            </div>
+            <div class="item" id="item-6">
+                <button>
+                    <i class="fas fa-desktop"></i>
+                    <strong>$EQUIPO6</strong>
+                </button>
+            </div>
+        </div>
+        <div class="main__aside">
+            <div class="main__alerts">
+                <h3>Notificaciones</h3>
+                <div class="panel-alertas">
+                    <ul>
 
-                            <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo
-                                <strong>$EQUIPO2</strong></li>
-                            <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la
-                                IP:
-                                127.0.0.1</li>
-                            <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="main__calendar">
-                    <h3>Programar un evento</h3>
-                    <form id="nuevo-evento" method="POST">
-                        <label for="fecha-evento">Fecha del evento</label>
-                        <input type="date" name="fecha-evento" id="fecha-evento" required>
-                        <textarea name="info-evento" id="info-evento" cols="30" rows="10"
-                            placeholder="Escribe el evento a recordar" required></textarea>
-                        <button type="submit" onclick="saveEvent()">Programar</button>
-                    </form>
+                        <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo
+                            <strong>$EQUIPO2</strong></li>
+                        <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la
+                            IP:
+                            127.0.0.1</li>
+                        <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
+                    </ul>
                 </div>
             </div>
-        </main>
-    </div>
+            <div class="main__calendar">
+                <h3>Programar un evento</h3>
+                <form id="nuevo-evento" method="POST">
+                    <label for="fecha-evento">Fecha del evento</label>
+                    <input type="date" name="fecha-evento" id="fecha-evento" required>
+                    <textarea name="info-evento" id="info-evento" cols="30" rows="10"
+                        placeholder="Escribe el evento a recordar" required></textarea>
+                    <button type="submit" onclick="saveEvent()">Programar</button>
+                </form>
+            </div>
+        </div>
+    </main>
     <footer class="footer">
         <div class="footer__wrapper">
             <div class="footer__logos">
@@ -173,19 +171,6 @@
             <h5>G2Inventory 2021 Todos los derechos reservados. Un desarrollo de <strong>G2</strong></h5>
         </div>
     </footer>
-
-    <!-- Display
-                        <ul>
-                    <li>Tipo: Escritorio</li>
-                    <li>Marca:</li>
-                    <li>Procesador:</li>
-                    <li>Memoria:</li>
-                    <li>Almacenamiento:</li>
-                    <li>Estado</li>
-                    <li></li>
-                </ul>
-    -->
-
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

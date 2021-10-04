@@ -116,7 +116,7 @@ img {
 
 .sidebar{
     background-color: darkgrey;
-    width: 25%;
+    padding: 1rem;
 }
 
 .sidebar h3{
@@ -157,34 +157,42 @@ img {
 
 /* main */
 
-.main {
-    display: flex;
-    height: calc(100vh - 17rem);
-}
-
 .wrapper__main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    /* min-height: calc(100vh - 9rem); */
 }
-
 
 .main__display {
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(4, 8rem);
-    gap: 1rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     background-color: #bbb;
-    width: 70%;
-    padding: 0 0 1rem 0;
+    padding: 1rem;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: 1rem;
+    justify-items: center
+}
 
-.item button{
-    padding: 1.5rem 0;
+.item {
     width: 8rem;
     height: 8rem;
+    background-color: #0099E0;
+    border-radius: 1rem;
 }
+
+/* .main__display button{
+    width: 8rem;
+    height: 8rem;
+} */
+
+/* .item button{
+    width: 8rem;
+    height: 8rem;
+} */
+
 .item button i{
     font-size: 3.5rem;
     display: block;
@@ -194,8 +202,9 @@ img {
 /* main aside modules */
 
 .main__aside {
-    width: 30%;
-    height: calc(100vh - 17rem);
+    background-color: #eee;
+    min-width: 3rem;
+    padding: 1rem;
 }
 
 .main__aside textarea{
@@ -207,15 +216,15 @@ img {
 /* footer */
 
 .footer {
-    height: 10rem;
     background-color: var(--primary-blue);
     color: white;
 }
 
 .footer__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-height: 9rem;
+    padding: 1rem;
 }
 
 .footer__logos img {
@@ -223,11 +232,9 @@ img {
 }
 
 .footer__support {
-    align-items: center;
-}
-
-.footer__support h2 {
-    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .footer__support ul {
@@ -236,7 +243,7 @@ img {
 }
 
 .footer__support i {
-    padding: 0 0.5rem 0 1.5rem;
+    padding: 0 .5rem 0 1.5rem;
 }
 
 /* Copy */
@@ -244,10 +251,12 @@ img {
 .footer__copy h5{
     text-align: center;
     padding: 0.5rem;
+    margin: 0;
 }
 
 .footer__copy {
     background-color: var(--secundary-blue);
+    margin: 0;
 }
 
 /* Extra estilos */
@@ -269,3 +278,29 @@ img {
     width: 0 !important;
     display: none;
 }
+
+/* @media screen and (max-width: 1220px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
