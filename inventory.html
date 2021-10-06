@@ -37,7 +37,7 @@
                 G2Inventory
             </h1>
         </div>
-        <div id="main-content__srch-user">
+        <div class="main-content__wrapper-s-u">
             <div class="main-content__search">
                 <label for="buscar">
                     <button id="btn-search" class="search-close" onclick="toggleSearch()"><i
@@ -46,18 +46,22 @@
                 </label>
             </div>
             <div class="main-content__user">
-                <button class="nobnt">
-                    <div class="user-info">
-                        <i class="fas fa-user"></i>
-                        <span><a href="/usuarios.html">admin</span></a>
-                        <ul>
-                            <li id="rol">Rol: admin/usuario</li>
-                            <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
-                            <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
-                        </ul>
+                <button class="nobnt" id="btn-user" onclick="toggleMenuUser()">
+                <i class="fas fa-user"></i>
+                <div class="user">
+                <a href="/usuarios.html"><span>admin</span></a>
+                <div class="menu-user hidden" id="menu-user">
+                    <ul>
+                        <li id="rol">Rol: <small>Usuario</small></li>
+                        <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
+                        <li><a href=""></a><i class="fas fa-user"></i>Agregar</a></li>
+                        <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                    </ul>
+                </div>
+                
                 </button>
             </div>
-        </div>
+            </div>
     </header>
     <main class="wrapper__main">
         <div class="sidebar">
@@ -68,9 +72,9 @@
             <div class="sidebar__menu">
                 <h3>Registros</h3>
                 <ul>
-                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i>Nuevo</a></li>
-                    <li><a href="#"><i class="far fa-edit"></i>Modificar</a></li>
-                    <li><a href="#"><i class="far fa-minus-square"></i>Eliminar</a></li>
+                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i><span>Nuevo</span></a></li>
+                    <li><a href="#"><i class="far fa-edit"></i><span>Modificar</span></a></li>
+                    <li><a href="#"><i class="far fa-minus-square"></i><span>Eliminar</span></a></li>
                 </ul>
             </div>
             <div class="sidebar__filter">
@@ -88,7 +92,40 @@
             </div>
         </div>
         <div class="main__display grid">
-            <div class="item" id="item-1">
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+            <div class="item">
+                <i class="fas fa-desktop"></i>
+                <strong>$EQUIPO1</strong>
+            </div>
+
+            <!-- <div class="item" id="item-1">
                 <button>
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO1</strong>
@@ -123,7 +160,7 @@
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO6</strong>
                 </button>
-            </div>
+            </div> -->
         </div>
         <div class="main__aside">
             <div class="main__alerts">
