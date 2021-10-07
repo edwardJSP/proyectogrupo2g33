@@ -30,6 +30,21 @@
 
 <body>
 
+    <!-- Ventana emergente -->
+    <div class="item-info-block hidden" id="item-show">
+        <div class="item-info">
+            <i class="far fa-window-close" onclick="itemInfo()"></i>
+            <div class="item-active item" id="item-2">
+                <i class="fas fa-desktop"></i>
+                <h5>Nombre: <strong id="item-2">$EQUIPO2</strong></h5>
+                <h5>Tipo: <span>Escritorio</span></h5>
+                <h5>Marca: <span>HP</span></h5>
+                <h5>Estado: <span>Usado</span></h5>
+                <h5>Detalles: <span>El equipo se encuentra con buen funcionamiento.</span></h5>
+            </div>
+        </div>
+    </div>
+
     <header class="main-content">
         <div class="main-content__brand">
             <img src="/images/logo.png" alt="Logo de la empresa">
@@ -45,43 +60,43 @@
                     <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
                 </label>
             </div>
-            <div class="main-content__user">
-                <button class="nobnt" id="btn-user" onclick="toggleMenuUser()">
+            <div id="user-card" class="main-content__user" onclick="toggleMenuUser()">
                 <i class="fas fa-user"></i>
                 <div class="user">
-                <a href="/usuarios.html"><span>admin</span></a>
-                <div class="menu-user hidden" id="menu-user">
-                    <ul>
-                        <li id="rol">Rol: <small>Usuario</small></li>
-                        <li><a href=""></a><i class="fas fa-cog"></i>Editar</a></li>
-                        <li><a href=""></a><i class="fas fa-user"></i>Agregar</a></li>
-                        <li><a href=""><i class="fas fa-sign-out-alt"></i>Salir</a></li>
-                    </ul>
+                    <a href=""><span>admin</span></a>
+                    <div class="menu-user hidden" id="menu-user">
+                        <ul>
+                            <li id="rol">Rol: <small>Usuario</small></li>
+                            <li><a href="https://app.dssu.xyz/"><i class="fas fa-cog"></i>Editar</a></li>
+                            <li><a href="/usuarios.html"><i class="fas fa-user"></i>Agregar</a></li>
+                            <li><a href="/index.html"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                        </ul>
+                    </div>
                 </div>
-                
-                </button>
             </div>
-            </div>
+        </div>
     </header>
     <main class="wrapper__main">
-        <div class="sidebar">
-            <div class="sidebar__button">
+        <div class="sidebar" id="sm">
+            <div class="sidebar__button" onclick="togglePanel()">
                 <i class="fas fa-bars"></i>
-                <h2>Panel</h2>
+                <h2 id="sm1" class="sm">Panel</h2>
             </div>
             <div class="sidebar__menu">
-                <h3>Registros</h3>
+                <h3 id="sm2" class="sm">Registros</h3>
                 <ul>
-                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i><span>Nuevo</span></a></li>
-                    <li><a href="#"><i class="far fa-edit"></i><span>Modificar</span></a></li>
-                    <li><a href="#"><i class="far fa-minus-square"></i><span>Eliminar</span></a></li>
+                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i><span id="sm3"
+                                class="sm">Nuevo</span></a></li>
+                    <li><a href="#"><i class="far fa-edit"></i><span id="sm4" class="sm">Modificar</span></a></li>
+                    <li><a href="#"><i class="far fa-minus-square"></i><span id="sm5" class="sm">Eliminar</span></a>
+                    </li>
                 </ul>
             </div>
             <div class="sidebar__filter">
-                <h3>Categorias</h3>
+                <h3 id="sm6" class="sm">Categorias</h3>
                 <ul>
                     <li>
-                        <button onclick="">Tipo</button>
+                        <button class="nobtn" onclick="">Tipo</button>
                         <ul>
                             <li>Escritorio</li>
                             <li>Portatil</li>
@@ -91,100 +106,63 @@
                 </ul>
             </div>
         </div>
-        <div class="main__display grid">
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-            <div class="item">
-                <i class="fas fa-desktop"></i>
-                <strong>$EQUIPO1</strong>
-            </div>
-
-            <!-- <div class="item" id="item-1">
-                <button>
+        <div class="main__display">
+            <div class="main-grid">
+                <div class="item" onclick="itemInfo()" id="item-1">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO1</strong>
-                </button>
-            </div>
-            <div class="item" id="item-2">
-                <button>
+                </div>
+
+                <div class="item" onclick="itemInfo()" id="item-2">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO2</strong>
-                </button>
-            </div>
-            <div class="item" id="item-3">
-                <button>
+                </div>
+                <div class="item" onclick="itemInfo()" id="item-3">
+
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO3</strong>
-                </button>
-            </div>
-            <div class="item" id="item-4">
-                <button>
+                </div>
+                <div class="item" onclick="itemInfo()" id="item-4">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO4</strong>
-                </button>
-            </div>
-            <div class="item" id="item-5">
-                <button>
+                </div>
+                <div class="item" onclick="itemInfo()" id="item-5">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO5</strong>
-                </button>
-            </div>
-            <div class="item" id="item-6">
-                <button>
+                </div>
+                <div class="item" onclick="itemInfo()" id="item-6">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO6</strong>
-                </button>
-            </div> -->
-        </div>
-        <div class="main__aside">
-            <div class="main__alerts">
-                <h3>Notificaciones</h3>
-                <div class="panel-alertas">
-                    <ul>
-
-                        <li><strong>$EDIT</strong> El usuario <span>admin</span> ha modificado el dispositivo
-                            <strong>$EQUIPO2</strong></li>
-                        <li><strong>$JOIN</strong> El usuario <span>Daniel</span> ha ingresado al sistema desde la
-                            IP:
-                            127.0.0.1</li>
-                        <li><strong>$EVENT</strong> El usuario <span>admin</span> ha programado un evento.</li>
-                    </ul>
                 </div>
             </div>
-            <div class="main__calendar">
+        </div>
+        <div class="main-aside">
+            <div class="main-aside__noti">
+                <h3>Notificaciones</h3>
+                <div class="panel-noti">
+                    <div class="card-noti"><strong>$EDIT:</strong> El usuario <span>admin</span> ha modificado el
+                        dispositivo
+                        <strong>$EQUIPO2</strong></div>
+                    <div class="card-noti"><strong>$JOIN:</strong> El usuario <span>Daniel</span> ha ingresado al
+                        sistema
+                        desde la
+                        IP:
+                        127.0.0.1</div>
+                    <div class="card-noti"><strong>$EVENT:</strong> El usuario <span>admin</span> ha programado un
+                        evento.
+                    </div>
+                </div>
+            </div>
+            <div class="main-aside__calendar">
                 <h3>Programar un evento</h3>
                 <form id="nuevo-evento" method="POST">
-                    <label for="fecha-evento">Fecha del evento</label>
-                    <input type="date" name="fecha-evento" id="fecha-evento" required>
+                    <div class="fecha-evento">
+                        <label for="fecha-evento">Fecha del evento</label>
+                        <input type="date" name="fecha-evento" id="fecha-evento" required>
+                    </div>
                     <textarea name="info-evento" id="info-evento" cols="30" rows="10"
-                        placeholder="Escribe el evento a recordar" required></textarea>
-                    <button type="submit" onclick="saveEvent()">Programar</button>
+                        placeholder="Escribe un evento a recordar..." required></textarea>
+                    <button type="submit" class="nobtn" onclick="saveEvent()">Programar</button>
                 </form>
             </div>
         </div>
