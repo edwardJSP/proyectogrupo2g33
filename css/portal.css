@@ -1,35 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
 
 h2 {
   font-size: 40px;
 }
-header {
-    background-color: #191970;
-    align-items: center;
-    padding: 0 0 -5rem 0;
-    
-}
-.main-content__brand h1{
-    color:white;
-    padding: 3px;
-    
-}
-.main-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.main-content__brand {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0 1rem 1rem ;
 
-}
 .main h2{
     display: flex;
     justify-content: center;

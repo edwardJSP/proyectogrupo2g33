@@ -177,7 +177,7 @@ a {
 
 .main-aside {
     background-color: var(--gray-c);
-    padding: 1rem;
+    padding: 1rem 1rem 5rem;
 }
 
 .main-aside h3 {
