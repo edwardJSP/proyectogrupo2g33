@@ -3,6 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+  color: white;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  display: flex;
+  background:  #191970;
+  
+}
+
+img{
+    align-items: center;
+  display: flex;
+}
 
 body {
   background-image: url('fondo.jpg');

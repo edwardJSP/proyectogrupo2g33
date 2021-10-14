@@ -15,13 +15,10 @@
     <meta http-equiv="Expires" content="0">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/inventory.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <!-- google fonds-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <!-- Icon -->
     <link rel="icon" type="image/png" href="/images/logo.png">
     <!-- Titulo -->
@@ -31,9 +28,9 @@
 <body>
 
     <!-- Ventana emergente -->
-    <div class="item-info-block hidden" id="item-show">
+    <!-- <div class="item-info-block hidden" id="item-show">
         <div class="item-info">
-            <i class="far fa-window-close" onclick="itemInfo()"></i>
+            <i class="far fa-window-close"></i>
             <div class="item-active item" id="item-2">
                 <i class="fas fa-desktop"></i>
                 <h5>Nombre: <strong id="item-2">$EQUIPO2</strong></h5>
@@ -43,24 +40,26 @@
                 <h5>Detalles: <span>El equipo se encuentra con buen funcionamiento.</span></h5>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <header class="main-content">
         <div class="main-content__brand">
+            <a href="/index.html">
             <img src="/images/logo.png" alt="Logo de la empresa">
             <h1>
                 G2Inventory
             </h1>
+            </a>
         </div>
         <div class="main-content__wrapper-s-u">
             <div class="main-content__search">
                 <label for="buscar">
-                    <button id="btn-search" class="search-close" onclick="toggleSearch()"><i
+                    <button id="btn-search" class="search-close"><i
                             class="fas fa-search"></i></button>
                     <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
                 </label>
             </div>
-            <div id="user-card" class="main-content__user" onclick="toggleMenuUser()">
+            <div id="user-card" class="main-content__user">
                 <i class="fas fa-user"></i>
                 <div class="user">
                     <a href=""><span>admin</span></a>
@@ -78,7 +77,7 @@
     </header>
     <main class="wrapper__main">
         <div class="sidebar" id="sm">
-            <div class="sidebar__button" onclick="togglePanel()">
+            <div class="sidebar__button">
                 <i class="fas fa-bars"></i>
                 <h2 id="sm1" class="sm">Panel</h2>
             </div>
@@ -96,7 +95,7 @@
                 <h3 id="sm6" class="sm">Categorias</h3>
                 <ul>
                     <li>
-                        <button class="nobtn" onclick="">Tipo</button>
+                        <button class="nobtn">Tipo</button>
                         <ul>
                             <li>Escritorio</li>
                             <li>Portatil</li>
@@ -108,29 +107,29 @@
         </div>
         <div class="main__display">
             <div class="main-grid">
-                <div class="item" onclick="itemInfo()" id="item-1">
+                <div class="item" id="item-1">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO1</strong>
                 </div>
 
-                <div class="item" onclick="itemInfo()" id="item-2">
+                <div class="item" id="item-2">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO2</strong>
                 </div>
-                <div class="item" onclick="itemInfo()" id="item-3">
+                <div class="item" id="item-3">
 
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO3</strong>
                 </div>
-                <div class="item" onclick="itemInfo()" id="item-4">
+                <div class="item" id="item-4">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO4</strong>
                 </div>
-                <div class="item" onclick="itemInfo()" id="item-5">
+                <div class="item" id="item-5">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO5</strong>
                 </div>
-                <div class="item" onclick="itemInfo()" id="item-6">
+                <div class="item" id="item-6">
                     <i class="fas fa-desktop"></i>
                     <strong>$EQUIPO6</strong>
                 </div>
@@ -162,7 +161,7 @@
                     </div>
                     <textarea name="info-evento" id="info-evento" cols="30" rows="10"
                         placeholder="Escribe un evento a recordar..." required></textarea>
-                    <button type="submit" class="nobtn" onclick="saveEvent()">Programar</button>
+                    <button type="submit" class="nobtn">Programar</button>
                 </form>
             </div>
         </div>

@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registo de equipos</title>
     <link rel="stylesheet" href="/css/equipos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
+
 <body>
     <header class="main-content">
         <div class="main-content__brand">
-            <img src="images/logo.png" alt="Logo de la empresa" width="90px" height="90px">
-            <h1>
-                G2Inventory
-            </h1>
+            <a href="/index.html">
+                <img src="/images/logo.png" alt="Logo de la empresa">
+                <h1>
+                    G2Inventory
+                </h1>
+            </a>
         </div>
-        <div class="main-content__user">
-            <div class="user-icon">
-                <img src="images/icons8-hombre-de-negocios-50.png" alt="admin">
+        <div id="user-card" class="main-content__user">
+            <i class="fas fa-user"></i>
+            <div class="user">
+                <a href=""><span>admin</span></a>
             </div>
-            <div class="user-info">
-                <span>Admin</span>
-           </div>
+        </div>
     </header>
     <h2>Registro de Dispositivo</h2>
     <main>
         <form action="">
-        <div>
-            <label for="tipo-de-dispositivo" class="">Tipo de Dispositivo</label>
-            <select name="Equipos" required>
-                <option value="" disablec Selected>SELECION DISPOSITIVO</option>
-                <option value="Portatil">PORTATIL</option>
-                <option value="Escritorio">ESCRITORIO</option>
-                <option value="Movil">MOVIL</option>
-                <option value="Redes">REDES</option>
-                <option value="Tableta">TABLETA</option>
-                <option value="Accesorio">ACCESORIO</option>
-            </select>
-        </div>
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" value="" required>
-        </div>
-        <div>
-            <label for="marca">Marca</label>
-            <input type="text" name="marca" id="marca" value="" required>
-        </div>
-        <div>
-            <label for="procesador">Procesador</label>
-            <input type="text" name="procesador" id="procesador" value="">
-        </div>
-        <div>
-            <label for="memoria">Memoria</label>
-            <input type="text" name="memoria" id="memoria" value="">
-        </div>
-        <div>
-            <label for="almacenamiento">Almacenamiento</label>
-            <input type="text" name="almacenamiento" id="almacenamiento" value="">
-        </div>
-        <div>
-            <label for="estado">Estado</label>
-            <select name="estado" required>
-                <option value="" disablec Selected>--SELECION ESTADO--</option>
-                <option value="nuevo">NUEVOS</option>
-                <option value="usado">USADO</option>
-                <option value="con-fallos">CON FALLOS</option>
-            </select>
-        </div>
-        <div>
-            <label for="detalles">Detalles</label>
-            <textarea name="detalles" id="detalles" cols="30" rows="10" required>
+            <div>
+                <label for="tipo-de-dispositivo" class="">Tipo de Dispositivo</label>
+                <select name="Equipos" required>
+                    <option value="" disablec Selected>SELECION DISPOSITIVO</option>
+                    <option value="Portatil">PORTATIL</option>
+                    <option value="Escritorio">ESCRITORIO</option>
+                    <option value="Movil">MOVIL</option>
+                    <option value="Redes">REDES</option>
+                    <option value="Tableta">TABLETA</option>
+                    <option value="Accesorio">ACCESORIO</option>
+                </select>
+            </div>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" value="" required>
+            </div>
+            <div>
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" id="marca" value="" required>
+            </div>
+            <div>
+                <label for="procesador">Procesador</label>
+                <input type="text" name="procesador" id="procesador" value="">
+            </div>
+            <div>
+                <label for="memoria">Memoria</label>
+                <input type="text" name="memoria" id="memoria" value="">
+            </div>
+            <div>
+                <label for="almacenamiento">Almacenamiento</label>
+                <input type="text" name="almacenamiento" id="almacenamiento" value="">
+            </div>
+            <div>
+                <label for="estado">Estado</label>
+                <select name="estado" required>
+                    <option value="" disablec Selected>SELECION ESTADO</option>
+                    <option value="nuevo">NUEVOS</option>
+                    <option value="usado">USADO</option>
+                    <option value="con-fallos">CON FALLOS</option>
+                </select>
+            </div>
+            <div>
+                <label for="detalles">Detalles</label>
+                <textarea name="detalles" id="detalles" cols="30" rows="10" required>
 
             </textarea>
-        </div>
-        <div>
-            <label for="importar">Imagen</label>
-            <input type="file" name="importar" id="importar">
-        </div class="button-container">
-        <input type="button" value="Registrar" id="btn_registrar">
+            </div>
+            <div>
+                <label for="importar">Imagen</label>
+                <input type="file" name="importar" id="importar">
+            </div class="button-container">
+            <div class="section">
+                <button class="bnt-join">Registrar</a></button>
+                <button class="bnt-join">Cancelar</a></button>
+            </div>
+
         </form>
     </main>
 </body>
+
 </html>

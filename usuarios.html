@@ -5,50 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulario Registro</title>
     <link rel="stylesheet" href="/css/usuarios.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     </head>
     <body>
         <header class="main-content">
             <div class="main-content__brand">
-                <img src="images/logo.png" alt="Logo de la empresa" width="90px" height="90px">
-                <h1>
-                    G2Inventory
-                </h1>
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Logo de la empresa">
+                    <h1>
+                        G2Inventory
+                    </h1>
+                </a>
             </div>
-            <div class="main-content__user">
-                <div class="user-icon">
-                    <img src="images/icons8-hombre-de-negocios-50.jpeg" alt="admin">
+            <div id="user-card" class="main-content__user">
+                <i class="fas fa-user"></i>
+                <div class="user">
+                    <a href=""><span>admin</span></a>
                 </div>
-                <div class="user-info">
-                    <span>Admin</span>
-           </div>
+            </div>
         </header>
+            <h2>Registro de Usuario</h2>
         <main>
-        <br><br>
-            <h1>
-                Registro de Usuario
-            </h1>
             <section>
                 <form action="registrardatos" method="post">
-                    <br><br>
+                    <div>
                     <label for="Usuario">Tipo de Usuario: </label>
-                    <br><br>
-                    <select name="combo">
+                    <select name="tipo">
                         <!-- Opciones de la lista -->
                         <option value="1">Admin</option>
                         <option value="2" selected>Usuario</option> <!-- Opción por defecto -->
                     </select>
-                    <br><br>
-                    <p>Nombres: <input type="text" name="nombres" size="40"></p>
-                    <br><br>
-                    <p>Apellidos: <input type="text" name="apellidos" size="40"></p>
-                    <br><br>
-                    <p>Correo: <input type="email" name="correo" size="40"></p>
-                    <br><br>
-                    <p>Contraseña: <input type="password" name="password" minlength="6"></p>
-                    <br><br>
-                    <input type="submit" value="Registrarse">
-                    <br><br>
-                    <a href="/inventory.html"> Ir a la pagina principal</a>
+                    </div>
+                    <div>
+                        <label for="nombres">Nombres</label>
+                        <input type="text" name="nombre" id="nombre" value="" required>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos</label> 
+                        <input type="text" name="apellidos" size="40"></p>
+                    </div>
+                    <div>
+                        <label for="Correo">Correo</label>  
+                        <input type="email" name="correo" size="40"></p>
+                    </div>
+                    <div>
+                        <label for="Contraseña">Contraseña</label>  
+                        <input type="password" name="password" minlength="6"></p>
+                    </div>
+                    <div class="section">
+                        <button class="bnt-join">Registrarse</a></button>
+                        <button class="bnt-join">Ir a la pagina Principal</a></button>
+                    </div>
                 </form>
             </section>
         </main>

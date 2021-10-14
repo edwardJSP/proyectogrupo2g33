@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/login.css">
-  <title>Ingrese datos</title>
+  <link rel="stylesheet" href="/css/header.css">
+  <title>Registro de usuario</title>
 </head>
+
 <body>
+
+  <header class="main-content">
+    <div class="main-content__brand">
+      <a href="/index.html">
+        <img src="/images/logo.png" alt="Logo de la empresa">
+        <h1>
+          G2Inventory
+        </h1>
+      </a>
+    </div>
+  </header>
+
   <section class="form-register">
+
     <h4>Ingrese datos</h4>
-    <Label for "correo" >Email: </Label>
+    <hr>
+    <Label for="correo">Email: </Label>
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <Label for "contraseña" >Contraseña: </Label>
+    <Label for="contraseña">Contraseña: </Label>
     <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
 
-    <a href="/inventory.html"><input class="botons" type="submit" value="Entrar"></a>
- 
-    
+    <input class="botons" type="submit" value="Entrar">
+
+
   </section>
 
 </body>
+
 </html>

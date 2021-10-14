@@ -1,0 +1,123 @@
+/* Main */
+:root {
+    --primary-blue: #191970;
+    --secundary-blue: #0099E0;
+    --white-wool: #E8E8E8;
+    --gray-c: #CCCCCC;
+    --gray-a: #AAAAAA;
+    --gray-5: #555555;
+    --blue-black: #000030;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* Header */
+
+.main-content {
+    background-color: var(--primary-blue);
+    height: 6rem;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* brand */
+
+.main-content__brand a{
+    display: flex;
+    align-items: center;
+    min-width: 17.5rem;
+}
+
+.main-content__brand img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
+}
+
+.main-content__brand h1 {
+    color: var(--white-wool);
+    font-weight: bold;
+}
+
+/* Wrapper Search & Users */
+
+.main-content__wrapper-s-u {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/* Buscador */
+
+.main-content__search * {
+    overflow: hidden;
+}
+
+.main-content__search label {
+    border-radius: 1rem;
+    height: 3rem;
+    min-width: 3rem;
+    max-width: 15rem;
+    display: flex;
+}
+
+.main-content__search label i {
+    color: var(--white-wool);
+}
+
+.main-content__search button {
+    border: 0;
+    background-color: var(--secundary-blue);
+    padding: 1rem 1.6rem 1rem 1rem;
+    margin-right: -.8rem;
+}
+
+.search-close {
+    padding: 1rem !important;
+}
+
+#in-buscar {
+    width: 12rem;
+    padding-left: .3rem;
+    border: 0;
+    outline: 0;
+}
+
+/* Usuario */
+
+.main-content__user {
+    margin-right: 1rem;
+    min-width: 8rem;
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-wool);
+    border-radius: 1rem;
+}
+
+.main-content__user>i {
+    padding: .5rem;
+    margin-right: .5rem;
+    background-color: var(--secundary-blue);
+    border-radius: 100%;
+    color: var(--white-wool);
+}
+
+.main-content__user>.user a span{
+    color: var(--secundary-blue);
+    font-weight: bold;
+
+}
