@@ -38,6 +38,9 @@ label{
     color:aliceblue;
     background: blue;
 }
+.section button a{
+    color:aliceblue;
+}
 
 input{
     display: flex;

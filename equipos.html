@@ -30,10 +30,10 @@
     </header>
     <h2>Registro de Dispositivo</h2>
     <main>
-        <form action="">
+        <form action="" id="formulario">
             <div>
-                <label for="tipo-de-dispositivo" class="">Tipo de Dispositivo</label>
-                <select name="Equipos" required>
+                <label for="tipo" class="">Tipo de Dispositivo</label>
+                <select name ="tipo" id = "tipo" >
                     <option value="" disablec Selected>SELECION DISPOSITIVO</option>
                     <option value="Portatil">PORTATIL</option>
                     <option value="Escritorio">ESCRITORIO</option>
@@ -45,11 +45,11 @@
             </div>
             <div>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" value="" required>
+                <input type="text" name="nombre" id="nombre" value="" >
             </div>
             <div>
                 <label for="marca">Marca</label>
-                <input type="text" name="marca" id="marca" value="" required>
+                <input type="text" name="marca" id="marca" value="" >
             </div>
             <div>
                 <label for="procesador">Procesador</label>
@@ -64,8 +64,8 @@
                 <input type="text" name="almacenamiento" id="almacenamiento" value="">
             </div>
             <div>
-                <label for="estado">Estado</label>
-                <select name="estado" required>
+                <label for="estados">Estado</label>
+                <select name ="estados" id = "estados" >
                     <option value="" disablec Selected>SELECION ESTADO</option>
                     <option value="nuevo">NUEVOS</option>
                     <option value="usado">USADO</option>
@@ -74,21 +74,22 @@
             </div>
             <div>
                 <label for="detalles">Detalles</label>
-                <textarea name="detalles" id="detalles" cols="30" rows="10" required>
+                <textarea name="detalles" id="detalles" cols="30" rows="10" >
 
             </textarea>
             </div>
             <div>
                 <label for="importar">Imagen</label>
-                <input type="file" name="importar" id="importar">
+                <input type="file" name="importado" id="importar">
             </div class="button-container">
             <div class="section">
-                <button class="bnt-join">Registrar</a></button>
-                <button class="bnt-join">Cancelar</a></button>
+                <button class="bnt-join" id="registrar">Registrar</button>
+                <button class="bnt-join" id="cancelar"><a href='inventory.html'>Cancelar</a></button>
             </div>
 
         </form>
     </main>
+    <script src="js/equipos.js"></script>
 </body>
 
 </html>
