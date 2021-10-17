@@ -14,20 +14,20 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/inventory.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="./css/inventory.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <!-- Icon -->
-    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Titulo -->
     <title>Inventario</title>
 </head>
 
 <body>
 
-    <!-- Ventana emergente pruebas -->
+    <!-- Ventana flotante informacion equipo -->
     <!-- <div class="item-info-block hidden" id="item-show">
         <div class="item-info">
             <i class="far fa-window-close"></i>
@@ -45,54 +45,48 @@
     <header class="main-content">
         <div class="main-content__brand">
             <a href="/index.html">
-            <img src="/images/logo.png" alt="Logo de la empresa">
-            <h1>
-                G2Inventory
-            </h1>
+                <img src="/images/logo.png" alt="Logo de la empresa">
+                <h1>
+                    G2Inventory
+                </h1>
             </a>
         </div>
         <div class="main-content__wrapper-s-u">
             <div class="main-content__search">
-                <label for="buscar">
-                    <button id="btn-search" class="search-close"><i
-                            class="fas fa-search"></i></button>
-                    <input type="search" name="in-buscar" id="in-buscar" placeholder="Buscar..." class="hidden">
+                <label for="in-search">
+                    <button id="btn-search" class="search-close"><i class="fas fa-search"></i></button>
+                    <input type="search" name="in-search" id="in-search" placeholder="Buscar..." class="hidden">
                 </label>
             </div>
-            <div id="user-card" class="main-content__user">
+            <div class="main-content__user">
                 <i class="fas fa-user"></i>
-                <div class="user">
-                    <a href=""><span>admin</span></a>
-                    <div class="menu-user hidden" id="menu-user">
-                        <ul>
-                            <li id="rol">Rol: <small>Usuario</small></li>
-                            <li><a href="https://app.dssu.xyz/"><i class="fas fa-cog"></i>Editar</a></li>
-                            <li><a href="/usuarios.html"><i class="fas fa-user"></i>Agregar</a></li>
-                            <li><a href="/index.html"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <span id="user">admin</span>
+                <ul class="menu-user">
+                    <li id="rol"><span>Rol: </span><strong>Usuario</strong></li>
+                    <!-- <li><a href="https://app.dssu.xyz/"><i class="fas fa-cog"></i>Editar</a></li>
+                            <li><a href="/usuarios.html"><i class="fas fa-user"></i>Agregar</a></li> -->
+                    <li><a href="./index.html"><i class="fas fa-sign-out-alt"></i><span>Salir</span></a></li>
+                </ul>
             </div>
         </div>
     </header>
     <main class="wrapper__main">
-        <div class="sidebar" id="sm">
+        <div class="sidebar">
             <div class="sidebar__button">
                 <i class="fas fa-bars"></i>
-                <h2 id="sm1" class="sm">Panel</h2>
+                <h2 class="sm">Panel</h2>
             </div>
             <div class="sidebar__menu">
-                <h3 id="sm2" class="sm">Registros</h3>
+                <h3 class="sm">Registros</h3>
                 <ul>
-                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i><span id="sm3"
-                                class="sm">Nuevo</span></a></li>
-                    <li><a href="#"><i class="far fa-edit"></i><span id="sm4" class="sm">Modificar</span></a></li>
-                    <li><a href="#"><i class="far fa-minus-square"></i><span id="sm5" class="sm">Eliminar</span></a>
+                    <li><a href="/equipos.html"><i class="far fa-plus-square"></i><span class="sm">Nuevo</span></a></li>
+                    <li><a href="#"><i class="far fa-edit"></i><span class="sm">Modificar</span></a></li>
+                    <li><a href="#"><i class="far fa-minus-square"></i><span class="sm">Eliminar</span></a>
                     </li>
                 </ul>
             </div>
             <div class="sidebar__filter">
-                <h3 id="sm6" class="sm">Categorias</h3>
+                <h3 class="sm">Categorias</h3>
                 <ul>
                     <li>
                         <button class="nobtn">Tipo</button>
@@ -107,61 +101,26 @@
         </div>
         <div class="main__display">
             <div class="main-grid">
-                <div class="item" id="item-1">
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO1</strong>
-                </div>
-
-                <div class="item" id="item-2">
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO2</strong>
-                </div>
-                <div class="item" id="item-3">
-
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO3</strong>
-                </div>
-                <div class="item" id="item-4">
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO4</strong>
-                </div>
-                <div class="item" id="item-5">
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO5</strong>
-                </div>
-                <div class="item" id="item-6">
-                    <i class="fas fa-desktop"></i>
-                    <strong>$EQUIPO6</strong>
-                </div>
+                <!-- Dispositivos -->
             </div>
         </div>
         <div class="main-aside">
             <div class="main-aside__noti">
                 <h3>Notificaciones</h3>
                 <div class="panel-noti">
-                    <div class="card-noti"><strong>$EDIT:</strong> El usuario <span>admin</span> ha modificado el
-                        dispositivo
-                        <strong>$EQUIPO2</strong></div>
-                    <div class="card-noti"><strong>$JOIN:</strong> El usuario <span>Daniel</span> ha ingresado al
-                        sistema
-                        desde la
-                        IP:
-                        127.0.0.1</div>
-                    <div class="card-noti"><strong>$EVENT:</strong> El usuario <span>admin</span> ha programado un
-                        evento.
-                    </div>
+                    <!-- Notificaciones -->
                 </div>
             </div>
-            <div class="main-aside__calendar">
+            <div class="main-aside__event">
                 <h3>Programar un evento</h3>
-                <form id="nuevo-evento" method="POST">
-                    <div class="fecha-evento">
-                        <label for="fecha-evento">Fecha del evento</label>
-                        <input type="date" name="fecha-evento" id="fecha-evento" required>
+                <form id="new-event">
+                    <div class="date-event">
+                        <label for="date-event">Fecha del evento</label>
+                        <input type="date" name="date-event" id="date-event" required>
                     </div>
-                    <textarea name="info-evento" id="info-evento" cols="30" rows="10"
+                    <textarea name="info-event" id="info-event" cols="30" rows="10"
                         placeholder="Escribe un evento a recordar..." required></textarea>
-                    <button type="submit" class="nobtn">Programar</button>
+                    <button class="nobtn">Programar</button>
                 </form>
             </div>
         </div>
@@ -190,7 +149,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
-    <script src="/js/main.js"></script>
+    <script src="./js/inventory.js"></script>
 </body>
 
 </html>
