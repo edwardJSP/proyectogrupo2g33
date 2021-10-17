@@ -1,9 +1,11 @@
+// Se definen las variables globales
+
 const searchBtn = document.querySelector('.main-content__search button');
 const sidebarBtn = document.querySelector('.sidebar__button');
 const mainGrid = document.querySelector('.main-grid');
 const panelNoti = document.querySelector('.panel-noti');
 const eventBtn = document.querySelector('#new-event button');
-let search
+let search;
 
 // Boton de busqueda el cual se abre al hacer click y toma el valor para hacer una "busqueda" o no... >:D
 
