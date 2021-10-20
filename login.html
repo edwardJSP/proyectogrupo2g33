@@ -25,15 +25,16 @@
 
   <section class="form-register">
 
-    <h4>Ingrese datos</h4>
-    <hr>
-    <Label for="correo">Email: </Label>
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <Label for="contraseña">Contraseña: </Label>
-    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-
-    <input class="botons" type="submit" value="Entrar">
-
+    <form name=form action="inicio secion">
+    
+        <Label for="correo" >Email: </Label>
+        <input class="controls" type=text  id="inputmail" name=login  placeholder="Ingrese su Correo">
+        <Label for="contraseña" >Contraseña: </Label>
+        <input class="controls" type=password  id="inputpassword"  name=password  placeholder="Ingrese su Contraseña">
+          <br>
+        <input onClick=ir()  type=button value="Entrar">
+ 
+    </form>
 
   </section>
 
