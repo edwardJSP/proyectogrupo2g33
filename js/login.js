@@ -3,7 +3,7 @@ function ir (){
     var c=2468;
     var u="NAME";
       if (document.forms.password.value==c && document.forms.login.value==u){
-      alert("Bienvenido a G2 Inventory");
+      alert("Bienvenido a G2 Inventory123");
     window.location="equipos.html";}
     
     else{ 
